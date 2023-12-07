@@ -4,6 +4,11 @@ const app = express();
 
 const port = 3005;
 
+
+app.get("/", (req, res) => {
+    res.send("welcome to server");
+  });
+
 app.get("/products", (req, res) => {
   res.send({
     products: [
@@ -13,6 +18,7 @@ app.get("/products", (req, res) => {
     ],
   });
 });
+
 
 app.listen(port, () => {
   console.log(`run at server${port}`);
